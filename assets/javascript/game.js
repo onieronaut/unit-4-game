@@ -30,7 +30,10 @@ function distributeNumbers() {
 
 //Create random target number
 function generateTarget() {
+    counter = 0;
     targetNumber = Math.floor(Math.random() * 100) + 19;
+    $("#target").text(targetNumber);
+    $("#start").text("0");
 }
 
 //Reset game on win/loss
@@ -46,22 +49,25 @@ generateNumbers();
 distributeNumbers();
 console.log(randomNumbers);
 console.log(targetNumber);
-$("#target").text(targetNumber);
 
 //Click on crystal
 $(".crystalImage").on("click", function() {
     var crystalValue = $(this).attr("value");
     counter += parseInt(crystalValue);
+    $("#start").text(counter);
     console.log(counter);
     
     if (counter === targetNumber) {
         wins++;
-        
+        $("#winCount").text(wins);
+        console.log("You win!");
         resetGame();
     }
 
     if (counter > targetNumber) {
         losses++;
+        $("#lossCount").text(losses);
+        console.log("You lost!");
         resetGame();
     }
 
