@@ -11,6 +11,8 @@ var targetNumber = 0;
 var wins = 0;
 var losses = 0;
 var randomNumbers = [];
+var winSound = new Audio("assets/sounds/ding.wav");
+var lossSound = new Audio("assets/sounds/loss.wav");
 
 
 //Generate 4 random numbers, from 1-12
@@ -61,16 +63,18 @@ $(".crystalImage").on("click", function() {
         wins++;
         $("#winCount").text(wins);
         console.log("You win!");
+        winSound.play();
         resetGame();
     }
-
+    
     if (counter > targetNumber) {
         losses++;
         $("#lossCount").text(losses);
         console.log("You lost!");
+        lossSound.play();
         resetGame();
     }
-
+    
 });
 
 });

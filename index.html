@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
@@ -11,21 +12,56 @@
 </head>
 <body>
     <div class="container">
-            <div class="jumbotron text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron text-center jumbobg">
                     <h1 class="display-3">Crystal Collector</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p class="lead"></p>
+                    <hr class="my-4 makewhite">
+                    <p>You will be given a random number at the start of the game.
+                        There are four crystals below, by clicking on a crystal you
+                        will add a specific amount of points to your total score.
+                    </p>
+                    <p>You win the game by matching your total score to the random
+                        number, you lose the game if your total score goes above the random number.
+                    </p>
+
+                    <p>The value of each crystal is hidden until you click on it.
+                        Each time when the game starts, the game will change the value of each crystal.
+                    </p>
                 </div>
-        <div class="box">Target number: <p id="target"></p></div>
-        <div class="box">Your number: <p id="start"></p></div>
-        <div class="box">Wins: <p id="winCount"></p></div>
-        <div class="box">Losses: <p id="lossCount"></p></div>
-        <div class="crystals">
-            <img class="crystalImage" id="blue" value="0" src="assets/images/bluecrystal.png" />
-            <img class="crystalImage" id="red" src="assets/images/redcrystal.png" />
-            <img class="crystalImage" id="purple" src="assets/images/purplecrystal.png"/>
-            <img class="crystalImage" id="black" src="assets/images/blackcrystal.png" />
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-sm-12">
+                <div class="card text-center">
+                    <div class="card-body score">
+                        <div class="box">Target<p id="target"></p></div>
+                        <div class="box">Start<p id="start"></p></div>
+                        <div class="box">Wins<p id="winCount">0</p></div>
+                        <div class="box">Losses<p id="lossCount">0</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row  text-center">
+            <div class="col-sm-3">
+                <img class="crystalImage" id="blue" value="0" src="assets/images/bluecrystal.png" />
+                
+            </div>
+            <div class="col-sm-3">
+                <img class="crystalImage" id="red" src="assets/images/redcrystal.png" />
+                
+            </div>
+            <div class="col-sm-3">
+                <img class="crystalImage" id="purple" src="assets/images/purplecrystal.png"/>
+                
+            </div>
+            <div class="col-sm-3">
+                <img class="crystalImage" id="black" src="assets/images/blackcrystal.png" />
+                
+            </div>
+        </div>
         </div>
     </div>
     </body>

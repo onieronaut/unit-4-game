@@ -1,9 +1,36 @@
 .crystalImage {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background: transparent;
+    background: #203586;
+    border: 1px solid #01b3d9;
+    
 }
 
 body {
-    background: #555;
+    background-image: url("../images/pattern.jpg");
+    background-size: 150px;
+    color: white;
+}
+
+.jumbobg {
+    background: #203586;
+    border: 2px solid #01b3d9;
+}
+
+hr {
+    border-color: white;
+}
+
+.score {
+    background: #203586;
+    border: 2px solid #01b3d9;
+}
+
+.card {
+    border: none;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
 }
